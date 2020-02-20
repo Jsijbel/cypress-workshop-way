@@ -30,7 +30,7 @@
 <body>
   <section class="todoapp">
     <header class="header">
-      <h1 data-cy="app-title">todos</h1>
+      <h1 data-test="app-title">todos</h1>
       <input class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?" :value="newTodo"
         @input="setNewTodo" @keyup.enter="addTodo">
     </header>
@@ -46,6 +46,44 @@
       </ul>
     </section>
     <div class="loading" v-show="loading">Loading data ...</div>
+  </section>
+  <section class="extra-elements">
+    <div class ="radio-example">
+      <h1 data-test="radio-title">Radio buttons</h1>
+      <input type="radio" id="A" name="radio" value="A">
+      <label for="A">A</label><br>
+      <input type="radio" id="B" name="radio" value="B">
+      <label for="B">B</label><br>
+      <input type="radio" id="C" name="radio" value="C">
+      <label for="C">C</label>
+    </div>
+    <div class ="select-example">
+      <h1 data-test="radio-title">Dropdown</h1>
+      <label for="cars">Kies een auto:</label>
+      <select id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </div>
+    <div class ="within-example">
+      <h1 data-test="within-title">Within test</h1>
+      <label data-test="test-label">Dit is een test label</label><br>
+      <input type="radio" id="radio-deep-eerste" name="radio-deep" value="eerste">
+      <label for="radio-deep-eerste">Eerste radio</label><br>
+      <input type="radio" id="radio-deep-tweede" name="radio-deep" value="tweede">
+      <label for="radio-deep-tweede">Tweede radio</label><br><br>
+
+      <div class ="within-deeper-example">
+        <label data-test="dieper-test-label">Dit is een dieper genest test label</label><br>
+        <label data-test="dieper-test-label">Dit is nog een dieper genest test label</label><br>
+        <input type="radio" id="radio-deep-derde" name="radio-deep" value="derde">
+        <label for="radio-deep-derde">Derde dieper radio</label><br>
+        <input type="radio" id="radio-deep-vierde" name="radio-deep" value="vierde">
+        <label for="radio-deep-vierde">Vierde dieper radio</label><br>
+      </div>
+    </div>
   </section>
   <footer class="info">
     <p>Written by

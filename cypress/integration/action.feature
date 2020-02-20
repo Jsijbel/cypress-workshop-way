@@ -4,38 +4,33 @@ Feature: Performing actions on selected elements
    I want to perform actions on elements with Cypress
    So i can mimic user behaviour and assert the correct outcome later
 
-Scenario: clicking
-Given i am on the todo list page
-When 
-Then i can see the element selected by Cypress in the gui test results
-And i am super proud
-
 Scenario: typing
 Given i am on the todo list page
-When 
-Then i can see the element selected by Cypress in the gui test results
+When i add a todo with the name "Eerste acties uitvoeren"
+Then i can see the result in the gui test results
 And i am super proud
 
 Scenario: checking
 Given i am on the todo list page
-When 
-Then i can see the element selected by Cypress in the gui test results
+When i complete todo with the name "Eerste acties uitvoeren"
+Then i can see the result in the gui test results
+And i am super proud
+
+Scenario: clicking
+Given i am on the todo list page
+When i delete todo with the name "Eerste acties uitvoeren"
+Then i can see the result in the gui test results
 And i am super proud
 
 Scenario: selecting
 Given i am on the todo list page
-When 
-Then i can see the element selected by Cypress in the gui test results
+When i select "Mercedes" from the car dropdown
+Then i can see the result in the gui test results
 And i am super proud
 
 Scenario: focussing
 Given i am on the todo list page
-When 
-Then i can see the element selected by Cypress in the gui test results
+When i focus on the todo textfield
+And i blur the todo textfield again
+Then i can see the result in the gui test results
 And i am super proud
-
-# .click()
-# .type()/.clear()
-# .check()/.uncheck()
-# .select()
-# .focus()/.blur()

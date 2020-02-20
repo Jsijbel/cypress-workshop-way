@@ -25,21 +25,13 @@ Then('then(assertion) step name', () => {
 Given('i am on the todo list page', () => {
     cy.visit('http://localhost:3000');
 });
-  
-When('the header is selected with cy.get', () => {
-    cy.get('h1');
-});
 
-When('the header is selected with cy.contains', () => {
-    cy.contains('h1', 'todos');
-});
-
-When('i can also chain this on a set of elements from get', () => {
-    cy.get('h1').contains('todos');
-});
-  
 Then('i can see the element selected by Cypress in the gui test results', () => {
     // no actual code here, this is just to show what happens when an element is selected
+});
+
+Then('i can see the result in the gui test results', () => {
+    // no actual code here, this is just for fun
 });
 
 Then('i am super proud', () => {
